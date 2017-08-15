@@ -1,0 +1,2 @@
+# simpleCalc
+Maven, jUnit
