@@ -1,12 +1,19 @@
 package com.draxvel.calc;
 
+import javax.jws.soap.SOAPBinding;
+
 public class Calculator {
 
     private int result;
 
-    public void add(final int ... params){
-        for(Integer param : params){
-            this.result +=param;
+    public void add(final int ... params) throws UserException{
+        if(params.length>0) {
+            for (Integer param : params) {
+                this.result += param;
+            }
+        } else
+        {
+            throw new UserException ("You should enter args!");
         }
     }
 
